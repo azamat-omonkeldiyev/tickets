@@ -1,10 +1,16 @@
-import React from 'react'
-import {Routes,Route} from "react-router-dom"
+import React, { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+// import { pageRouteList } from '../hooks/paths'
+import LoadingPage from '../components/LoadingPage'
 import { pageRoutesList } from '../hooks/paths'
 
 const PageRoutes = () => {
   return (
-    <Routes>{pageRoutesList.map(item => <Route key={item.id} path={item.path} element={item.element}/>)}</Routes>
+    <>
+    <Suspense fallback={<LoadingPage/>}>
+      <Routes> {pageRoutesList.map(item => <Route key={item.id} path={item.path} element={item.element}/>)} </Routes>
+    </Suspense>
+    </>
   )
 }
 

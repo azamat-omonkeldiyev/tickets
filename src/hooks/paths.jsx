@@ -1,5 +1,5 @@
 import { AgentIcon, ArticlesIcon, ContactIcon, IdeaIcon, OverViewIcon, SettingIcon, SubscriptionIcon, TicketsIcon } from "../assets/icons"
-import { Agents, Articles, Contacts, Ideas, Overview, Settings, Subscription, Tickets } from "../pages"
+import { Agents, Articles, Contacts, Ideas, Overview, Settings, Subscription, Tickets, TicketCreate,TicketsMore } from "../pages"
 
 export const paths = {
     overview: '/',
@@ -9,7 +9,10 @@ export const paths = {
     agents: '/agents',
     articles: '/articles',
     settings: '/settings',
-    subscription: '/subscription'
+    subscription: '/subscription',
+    ticketsCreate: "/tickets/create",
+    ticketsEdit: "/tickets/:id/edit",
+    ticketsMore:"/tickets/:id"
 }
 
 export const navList = [
@@ -103,5 +106,21 @@ export const pageRoutesList = [
         id: 8,
         path: paths.subscription,
         element: <Subscription/>
-    }
+    },
+    {
+        id: 9,
+        path: paths.ticketsCreate,
+        element: <TicketCreate />
+    },
+    {
+        id: 10,
+        path: paths.ticketsMore,
+        element: <TicketsMore />
+    },
+    {
+        id: 11,
+        path: paths.ticketsEdit,
+        element: <TicketCreate />
+    },
+    
 ]

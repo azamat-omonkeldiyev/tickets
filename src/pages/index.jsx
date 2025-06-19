@@ -6,5 +6,7 @@ import Agents from "./Agents";
 import Articles from "./Articles";
 import Settings from "./Settings";
 import Subscription from "./Subscription";
+import TicketCreate from "./TicketCreate";
+import TicketsMore from "./TicketsMore";
 
-export {Overview, Tickets, Ideas, Contacts, Agents, Articles,Settings, Subscription}
+export {Overview, Tickets, Ideas, Contacts, Agents, Articles,Settings, Subscription, TicketCreate, TicketsMore}
